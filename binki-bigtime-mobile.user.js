@@ -2,13 +2,18 @@
 // @name binki-bigtime-mobile
 // @homepageURL https://github.com/binki/binki-bigtime-mobile
 // @version 1.0.0
-// @match https://intuit.bigtime.net/bigtime
-// @match https://intuit.bigtime.net/bigtime/*
-// @match https://intuit.bigtime.net/Bigtime
-// @match https://intuit.bigtime.net/Bigtime/*
+// @match https://*.bigtime.net/bigtime
+// @match https://*.bigtime.net/bigtime/*
+// @match https://*.bigtime.net/Bigtime
+// @match https://*.bigtime.net/Bigtime/*
 // ==/UserScript==
 
 (async () => {
+  // We are forced to use wildcard @match above but we don’t want to match irrelevant subdomains.
+  // The only subdomain which has a fixed alternative purpose that we know about so far is “www.bigtime.net”,
+  // so test for that. See #1.
+  if (/^[^:]+:\/\/www\./.test(document.URL)) return;
+
   const style = document.createElement('style');
   style.textContent = `.timer-fullpage .list .timer {
   background: black;
