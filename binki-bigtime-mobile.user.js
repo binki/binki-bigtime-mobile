@@ -15,10 +15,7 @@
   if (/^[^:]+:\/\/www\./.test(document.URL)) return;
 
   const style = document.createElement('style');
-  style.textContent = `.timer-fullpage .list .timer {
-  background: black;
-}
-
+  style.textContent = `
 #main-pane {
   width: 100%;
 }
