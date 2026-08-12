@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name binki-bigtime-mobile
 // @homepageURL https://github.com/binki/binki-bigtime-mobile
-// @version 1.0.2
+// @version 1.1.0
 // @match https://*.bigtime.net/bigtime
 // @match https://*.bigtime.net/bigtime/*
 // @match https://*.bigtime.net/Bigtime
