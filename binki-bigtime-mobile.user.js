@@ -28,6 +28,10 @@
   #chatbot {
     display: none;
   }
+  /* The hardcoded width of 450px forces horizontal scrolling on mobile, so just let it be natural. */
+  .timer-fullpage {
+    width: initial;
+  }
 }
 
 `;
