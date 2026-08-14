@@ -17,7 +17,13 @@
   const style = document.createElement('style');
   style.textContent = `
 #main-pane {
-  width: 100%;
+  /* Need !important to override the style attribute for the Time Entries / My Timesheet / Week screen. */
+  width: initial !important;
+}
+
+.table,
+.table-timesheet.table-timesheet {
+  width: initial;
 }
 
 @media only screen and (max-width: 960px) {
