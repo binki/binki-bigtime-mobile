@@ -21,9 +21,17 @@
   width: initial !important;
 }
 
+/* time sheet */
 .table,
 .table-timesheet.table-timesheet {
   width: initial;
+}
+.timesheet_wrapper .table-timesheet tbody {
+  /* !important to override style attribute */
+  height: initial !important;
+  min-height: unset;
+  /* !important to override !important */
+  max-height: unset !important;
 }
 
 @media only screen and (max-width: 960px) {
